@@ -1,0 +1,79 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.block{
+  width: 100%;
+  height: 40px;
+  border-bottom:  1px solid rgba(128, 128, 128, 0.658);
+  display: block;
+  text-decoration: none;
+  align-content: center;
+  padding: 0 10px;
+}
+.sidebar{
+  width: 200px;
+  display: block;
+ border-right: 1px solid rgba(128, 128, 128, 0.658);
+ font-weight: 800;
+ margin-right: 10px;
+
+}
+.homepage{
+  margin-top: 30px;
+}
+
+.main-head{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(136, 48, 218);
+  padding: 0 5px;
+}
+
+.navhead{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo{
+  font-size: 25px;
+}
+
+.link{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.adminhead{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 5px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(173, 128, 214);
+}
+
+.outlet{
+  width: 100%;
+  height: 500px;
+}
+
+.footer{
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(173, 128, 214) ;
+}
+.mainadmin{
+  display: flex;
+  height: 550px;
+}

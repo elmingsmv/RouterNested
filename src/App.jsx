@@ -1,24 +1,28 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import Home from './pages/Home'
-import About from './pages/About'
-import Navbar from './Layout/Navbar'
-import EmployerAbout from './pages/EmployerAbout'
-import CorpAbout from './pages/CorpAbout'
+import UserLayout from './layout/user/userLayout'
+import AdminLayout from './layout/admin/adminLayout'
+import Blog from './pages/user/blog'
+import Contact from './pages/user/contact'
+import Home from './pages/user/home'
+import Categories from './pages/admin/categories'
+import Dashboard from './pages/admin/dashboard'
+import NotFound from './components/NotFound'
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/about' element={<About/>}>
-        <Route path='employer' element={<EmployerAbout/>}/>
-        <Route path='corp' element={<CorpAbout/>}/>
+    <Routes>
+      <Route path='/' element={<UserLayout />}>
+        <Route index element={<Home />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='contact' element={<Contact />} />
       </Route>
-
-      </Routes>
-    </div>
+      <Route path='/admin' element={<AdminLayout />}>
+        <Route path='category' element={<Categories />} />
+        <Route path='dashboard' element={<Dashboard />} />
+      </Route>
+      <Route path='*' element={<NotFound/>} />
+    </Routes>
   )
 }
 
